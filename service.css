@@ -1,0 +1,59 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
+}
+
+.navbar{
+  background-color: #111827;
+}
+
+.hero{
+  min-height: 100vh;
+  background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
+              url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1170&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.btn-gold{
+  background-color: #c99700;
+  color: white;
+  border: none;
+}
+
+.btn-gold:hover{
+  background-color: #a87f00;
+  color: white;
+}
+
+.service-card{
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover{
+  transform: translateY(-6px);
+}
+
+.service-card h5{
+  color: #c99700;
+  font-weight: bold;
+}
+
+.booking-section{
+  background-color: #e5e7eb;
+}
+
+.booking-form{
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+footer{
+  background-color: #111827;
+  color: white;
+}
