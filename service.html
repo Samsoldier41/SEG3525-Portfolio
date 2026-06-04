@@ -1,50 +1,172 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Site de services</title>
+  <title>Elite Barber Ottawa</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="service.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Elite Barber Ottawa</a>
 
-            <a href="index.html" class="navbar-brand">
-                Retour au portfolio
-            </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barberMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="barberMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#booking">Réserver</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Portfolio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero d-flex align-items-center text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Elite Barber Ottawa</h1>
+      <p class="lead">Un service de barbier moderne pour coupes, barbes et rendez-vous rapides.</p>
+      <a href="#booking" class="btn btn-gold btn-lg mt-3">Prendre rendez-vous</a>
+    </div>
+  </section>
+
+  <section id="services" class="container py-5">
+    <h2 class="text-center mb-4">Nos services</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h4>Coupe classique</h4>
+            <p>Coupe propre et professionnelle selon votre style.</p>
+            <h5>30 $</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h4>Dégradé / Fade</h4>
+            <p>Dégradé moderne avec finition précise.</p>
+            <h5>35 $</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body">
+            <h4>Barbe</h4>
+            <p>Taille de barbe, contours et finition propre.</p>
+            <h5>20 $</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Réserver un rendez-vous</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <form id="bookingForm" class="booking-form shadow">
+
+            <div class="mb-3">
+              <label class="form-label">Nom complet</label>
+              <input type="text" id="name" class="form-control" placeholder="Entrez votre nom">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Service</label>
+              <select id="service" class="form-select">
+                <option value="">Choisir un service</option>
+                <option value="Coupe classique">Coupe classique - 30 $</option>
+                <option value="Dégradé / Fade">Dégradé / Fade - 35 $</option>
+                <option value="Barbe">Barbe - 20 $</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Barbier</label>
+              <select id="barber" class="form-select">
+                <option value="">Choisir un barbier</option>
+                <option value="Adam">Adam</option>
+                <option value="Karim">Karim</option>
+                <option value="Youssef">Youssef</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Date</label>
+              <input type="date" id="date" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Heure</label>
+              <select id="time" class="form-select">
+                <option value="">Choisir une heure</option>
+                <option value="10:00">10:00</option>
+                <option value="12:00">12:00</option>
+                <option value="14:00">14:00</option>
+                <option value="16:00">16:00</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-gold w-100">
+              Confirmer la réservation
+            </button>
+
+          </form>
+
+          <div id="confirmation" class="alert alert-success mt-4 d-none"></div>
+          <div id="errorMessage" class="alert alert-danger mt-4 d-none">
+            Veuillez remplir tous les champs avant de confirmer.
+          </div>
 
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
 
-    <section class="container py-5 text-center">
+  <section id="contact" class="container py-5">
+    <h2 class="text-center mb-4">Contact</h2>
 
-        <h1 class="mb-4">
-            Site de services
-        </h1>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h5>Adresse</h5>
+        <p>123 Rideau Street, Ottawa</p>
+      </div>
 
-        <img
-            src="Service.jpg"
-            class="img-fluid rounded shadow mb-4"
-            alt=""
-        >
+      <div class="col-md-4">
+        <h5>Téléphone</h5>
+        <p>613-555-2026</p>
+      </div>
 
-        <p class="lead">
-            Cette partie porteras sur la conception d’un site web
-            moderne pour une entreprise de services.
-        </p>
+      <div class="col-md-4">
+        <h5>Heures</h5>
+        <p>Lundi - Samedi : 10h à 18h</p>
+      </div>
+    </div>
+  </section>
 
-        <p>
-            Le projet sera ajouté plus tard durant le semestre.
-        </p>
+  <footer class="text-center py-4">
+    <p class="mb-0">Designed by Samib · SEG3525</p>
+  </footer>
 
-    </section>
+  <script src="service.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
